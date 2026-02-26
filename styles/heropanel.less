@@ -1,0 +1,16 @@
+.hero-panel{
+    position: relative;
+    img {
+        .fit-image();
+    }
+    .hero-panel-action{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        .p-4();
+        background-color: @content-primary-background;
+        .shadow-lg();
+        .rounded-lg();
+    }
+}
