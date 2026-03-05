@@ -1,0 +1,12 @@
+<section class="grid-container">
+    <div class="row gap-4">
+        {{#each gallery_items}}
+            <div class="col-6 col-md-4">
+                <figure>
+                <img src="{{item-img}}" alt="{{item-alt}}" />
+                <figcaption>{{item-caption}}</figcaption>
+                </figure>
+            </div>
+        {{/each}}
+    </div>
+</section>

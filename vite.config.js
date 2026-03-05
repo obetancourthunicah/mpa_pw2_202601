@@ -5,6 +5,8 @@ import * as glob from "glob";
 import HtmlCssPurgePlugin from "vite-plugin-purgecss";
 import HandlebarsPlugin from "vite-plugin-handlebars";
 
+import getData from "./data/index";
+
 
 function obtenerHtmlFiles(){
     return Object.fromEntries(
@@ -36,6 +38,9 @@ export default defineConfig(
         plugins: [
             HandlebarsPlugin({
                 partialDirectory: resolve(__dirname, 'components'),
+                context: (page)=>{
+                    return getData(page);
+                }
             }),
             HtmlCssPurgePlugin(),
         ]

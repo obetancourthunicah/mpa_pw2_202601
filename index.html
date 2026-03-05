@@ -10,10 +10,7 @@
   <body>
     {{>header}}
     <main>
-      {{>hero_panel
-        backgroundId="100"
-        actionMessage="Hola Mundo desde Index"
-      }}
+      {{>hero_panel}}
 
       <section class="grid-container">
         <div class="row">
@@ -22,8 +19,26 @@
           </div>
         </div>
       </section>
-      
-      
+      {{>img_gallery gallery_items=index_gallery-item}}
+      <section class="grid">
+        <div class="row">
+          <div class="col-12 col-m-6">
+            <picture>
+              <source srcset="https://picsum.photos/id/30/640/640"  media="(min-width:720px)">
+              <img srcset="https://picsum.photos/id/30/320/320" alt="half panel" class="fit-image"/>
+            </picture>
+          </div>
+          <div class="col-12 col-m-6">
+            <form>
+              <h2>Formulario</h2>
+              <fieldset>
+                <label>Nombre Completo</label>
+                <input />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
       <div>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi ipsum voluptatum quidem voluptas molestiae! Facilis possimus nemo perspiciatis quis odit vitae accusantium reiciendis aperiam eius provident, molestiae, error delectus quas!
       </div>
