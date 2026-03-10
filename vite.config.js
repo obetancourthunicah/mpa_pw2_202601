@@ -30,6 +30,7 @@ function obtenerHtmlFiles(){
 export default defineConfig(
     {
         appType: 'mpa',
+        base: process.env.DEPLOY_BASE_URL ?? '/' ,
         build: {
             rollupOptions: {
                 input: obtenerHtmlFiles(),
